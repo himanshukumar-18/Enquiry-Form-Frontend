@@ -17,7 +17,7 @@ const ResponseBox = ({ loading, error, data }) => {
             const timer = setTimeout(() => setVisible(false), 3000);
             return () => clearTimeout(timer);
         } else if (data) {
-            setMessage(`Success! Your enquiry ID is ${data.id}`);
+            setMessage(`Success! Wait for response.`);
             setType("success");
             setVisible(true);
             const timer = setTimeout(() => setVisible(false), 3000);
@@ -35,10 +35,10 @@ const ResponseBox = ({ loading, error, data }) => {
                 </h3>
                 <p
                     className={`text-sm sm:text-base ${type === "error"
-                            ? "text-red-600"
-                            : type === "loading"
-                                ? "text-blue-600"
-                                : "text-green-600"
+                        ? "text-red-600"
+                        : type === "loading"
+                            ? "text-blue-600"
+                            : "text-green-600"
                         }`}
                 >
                     {message}

@@ -7,7 +7,6 @@ export const fetchUserID = createAsyncThunk(
     async (formData, { rejectWithValue }) => {
         try {
             const response = await axios.post("/enquiry-form", formData);
-            console.log(response.data.data);
             return response.data;
         } catch (error) {
             return rejectWithValue(error.response?.data || error.message);
