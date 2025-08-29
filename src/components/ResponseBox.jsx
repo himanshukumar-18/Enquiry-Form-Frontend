@@ -17,7 +17,7 @@ const ResponseBox = ({ loading, error, data }) => {
             const timer = setTimeout(() => setVisible(false), 3000);
             return () => clearTimeout(timer);
         } else if (data) {
-            setMessage(`Success! Your enquiry ID is ${data}`);
+            setMessage(`Success! Your enquiry ID is ${data.id}`);
             setType("success");
             setVisible(true);
             const timer = setTimeout(() => setVisible(false), 3000);
